@@ -1,0 +1,189 @@
+/* style.css — EventHub */
+/* Developer: Muhammad Ibrahim */
+/* https://www.linkedin.com/in/muhammad-ibrahim-o2 */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+/* NAVBAR */
+.navbar {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+    padding: 0.75rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.85) !important;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+}
+
+/* HERO */
+.hero-section {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.hero-icon {
+    color: #818cf8;
+}
+
+/* CTA SECTION */
+.cta-section {
+    background: linear-gradient(135deg, #f8f9ff 0%, #eef2ff 100%);
+    border-top: 1px solid #e0e7ff;
+    border-bottom: 1px solid #e0e7ff;
+}
+
+/* EVENT CARDS */
+.event-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 12px !important;
+    overflow: hidden;
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12) !important;
+}
+
+.card-accent {
+    height: 4px;
+}
+
+.accent-1 { background: linear-gradient(90deg, #6366f1, #818cf8); }
+.accent-2 { background: linear-gradient(90deg, #10b981, #34d399); }
+.accent-3 { background: linear-gradient(90deg, #f59e0b, #fbbf24); }
+.accent-0 { background: linear-gradient(90deg, #ef4444, #f87171); }
+
+/* DETAIL HEADER */
+.detail-header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+/* BUTTONS */
+.btn-primary {
+    background: linear-gradient(135deg, #6366f1, #4f46e5);
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #4f46e5, #4338ca);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+.btn-outline-primary {
+    border-color: #6366f1;
+    color: #6366f1;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-outline-primary:hover {
+    background: #6366f1;
+    border-color: #6366f1;
+}
+
+.btn-outline-danger {
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.btn-outline-secondary {
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.btn-light {
+    border-radius: 8px;
+    font-weight: 600;
+    color: #4f46e5;
+}
+
+/* FORMS */
+.form-control {
+    border-radius: 8px;
+    border: 1.5px solid #dee2e6;
+    padding: 0.6rem 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+/* TABLE */
+.table th {
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #6c757d;
+}
+
+.table td {
+    vertical-align: middle;
+}
+
+/* CARDS */
+.card {
+    border-radius: 12px;
+}
+
+/* FOOTER */
+.footer {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: rgba(255,255,255,0.85);
+}
+
+.footer .text-muted {
+    color: rgba(255,255,255,0.5) !important;
+}
+
+.footer-link {
+    color: #818cf8;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-link:hover {
+    color: #a5b4fc;
+    text-decoration: underline;
+}
+
+/* ALERTS */
+.alert {
+    border-radius: 10px;
+    border: none;
+}

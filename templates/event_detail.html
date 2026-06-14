@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ event['title'] }}{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <a href="{{ url_for('events') }}" class="btn btn-outline-secondary mb-4">
+        <i class="bi bi-arrow-left me-2"></i>Back to Events
+    </a>
+
+    <div class="row g-4">
+
+        <div class="col-lg-7">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="detail-header p-4 text-white">
+                    <h2 class="fw-bold mb-3">{{ event['title'] }}</h2>
+                    <div class="d-flex flex-wrap gap-3">
+                        <span>
+                            <i class="bi bi-calendar-fill me-2"></i>{{ event['date'] }}
+                        </span>
+                        <span>
+                            <i class="bi bi-geo-alt-fill me-2"></i>{{ event['venue'] }}
+                        </span>
+                    </div>
+                </div>
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-3">About This Event</h5>
+                    <p class="text-muted lh-lg">{{ event['description'] }}</p>
+                    <hr>
+                    <a href="{{ url_for('view_registrations', event_id=event['id']) }}"
+                       class="btn btn-outline-primary">
+                        <i class="bi bi-people me-2"></i>View Registered Participants
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="card shadow-sm border-0">
+                <div class="card-body p-4">
+                    <h5 class="fw-bold mb-1">
+                        <i class="bi bi-pencil-square me-2 text-primary"></i>Register Now
+                    </h5>
+                    <p class="text-muted small mb-4">
+                        Secure your spot — it's free and takes 10 seconds.
+                    </p>
+
+                    <form action="{{ url_for('register', event_id=event['id']) }}" method="POST">
+
+                        <div class="mb-3">
+                            <label for="student_name" class="form-label fw-semibold">
+                                Full Name <span class="text-danger">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="student_name"
+                                name="student_name"
+                                placeholder="e.g. Ahmed Ali"
+                                required
+                            >
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="form-label fw-semibold">
+                                Email Address <span class="text-danger">*</span>
+                            </label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="email"
+                                name="email"
+                                placeholder="e.g. ahmed@example.com"
+                                required
+                            >
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 py-2 fw-semibold">
+                            <i class="bi bi-check-circle me-2"></i>Confirm Registration
+                        </button>
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="alert alert-info mt-3 small">
+                <i class="bi bi-info-circle me-2"></i>
+                Already registered? You can view and cancel your registration from the
+                <a href="{{ url_for('view_registrations', event_id=event['id']) }}"
+                   class="alert-link">participants list</a>.
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
