@@ -1,4 +1,4 @@
-# EventHub — Event Registration System
+# EventHub Event Registration System
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue)
 ![Flask](https://img.shields.io/badge/Flask-2.x-lightgrey)
